@@ -38,7 +38,9 @@ the working copy on the server AND reload your unicorn instance.
 ## Getting Started
 
 ### Requirements
+
 URED requires:
+
 * node.js - built against v0.4.11, but may work with older/newer
 * [optimist module](https://github.com/substack/node-optimist) for node.js
 * forever module if you want it to detach from the shell
@@ -47,6 +49,7 @@ URED requires:
 URED makes the following assumptions about your environment. These are a little
 bit different than the standard environment simply because mine was a little bit
 different:
+
 * The unicorn.pid file will be located at RAILS_ROOT/tmp/unicorn.pid
 * The restart.txt file will be located at RAILS_ROOT/tmp/restart.txt
 * You're running URED as a user privilidged enough to send USR2 to Unicorn
@@ -59,5 +62,6 @@ To start URED, use the following format from the root directory of the git repo:
 You may repeat `p` as many times as you need to watch multiple projects at once.
 
 #### TODO
+
 * Allow for configuration of location of unicorn.pid
 * Allow for configuration of location of restart.txt
