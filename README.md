@@ -23,7 +23,7 @@ root (which you really shouldn't do) - your post_recieve script can't help you.
 You will be required to go into the server manually and send Unicorn that fateful
 USR2 to load up your shiny new code.
 
-## Enter the Unicorn Easy Restart Daemon (UERD)!
+### Enter the Unicorn Easy Restart Daemon (UERD)!
 UERD is designed to make your life easier by allowing you to touch a restart.txt
 file and have your entire application reloaded.
 
@@ -35,15 +35,15 @@ If you run the daemon as root, your issues of having to go into your terminal
 to load new code are solved. Your post-recieve script for git can now refresh
 the working copy on the server AND reload your unicorn instance.
 
-# Getting Started
+## Getting Started
 
-## Requirements
+### Requirements
 URED requires:
 * node.js - built against v0.4.11, but may work with older/newer
 * [optimist module](https://github.com/substack/node-optimist) for node.js
 * forever module if you want it to detach from the shell
 
-## Assumptions
+### Assumptions
 URED makes the following assumptions about your environment. These are a little
 bit different than the standard environment simply because mine was a little bit
 different:
@@ -51,13 +51,13 @@ different:
 * The restart.txt file will be located at RAILS_ROOT/tmp/restart.txt
 * You're running URED as a user privilidged enough to send USR2 to Unicorn
 
-## Usage
+### Usage
 To start URED, use the following format from the root directory of the git repo:
 
 `sudo node unicorneasyrestart.js -p [RAILS_ROOT]`
 
 You may repeat `p` as many times as you need to watch multiple projects at once.
 
-# TODO
+#### TODO
 * Allow for configuration of location of unicorn.pid
 * Allow for configuration of location of restart.txt
